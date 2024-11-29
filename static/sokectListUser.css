@@ -49,7 +49,7 @@ body {
 .events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsivo */
-    gap: 20px;
+    gap: 35px;
     padding: 20px 0;
 }
 
@@ -114,7 +114,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -122,30 +122,37 @@ body {
 
 .modal-content {
     background: white;
-    padding: 20px;
+    padding: 30px;  /* Ajustei o padding para dar mais espaço */
     border-radius: 0px; /* Bordas quadradas */
-    width: 300px;
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima da modal */
+    display: flex;
+    flex-direction: column;  /* Organiza os itens em uma coluna */
+    align-items: center;  /* Centraliza horizontalmente o conteúdo */
+    justify-content: center;  /* Centraliza verticalmente o conteúdo */
+    text-align: center;  /* Garante que o texto dentro da modal esteja centralizado */
 }
 
 .modal-content input {
-    width: 100%;
+    width: 100%;  /* O input ocupa 100% da largura disponível */
+    max-width: 300px;  /* Define um tamanho máximo para o input */
     padding: 8px;
     margin: 10px 0;
     border: 1px solid #ddd;
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 .modal-buttons {
     display: flex;
     gap: 10px;
-    justify-content: flex-end;
+    justify-content: center; /* Centraliza os botões */
     margin-top: 15px;
 }
 
 .modal-buttons button {
     padding: 8px 16px;
     border: none;
-    border-radius: 0px;
+    border-radius: 4px; /* Arredonda os cantos dos botões */
     cursor: pointer;
 }
 
@@ -157,6 +164,7 @@ body {
 .modal-buttons button:last-child {
     background-color: #e0e0e0;
 }
+
 
 /* Fila de Usuários */
 #queue-list {
