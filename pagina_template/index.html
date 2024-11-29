@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Event Reservation</title>
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>Sistema de Reserva de Eventos</h1>
+            <div class="online-users">
+                <i class="fas fa-users"></i>
+                <span id="online-count">0</span>  usuários online
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="left-panel">
+                <div id="events" class="events-grid">
+                    {% for event in events %}
+                    <div class="event-card" data-id="{{ event.id }}">
+                        <div class="event-header">
+                            <h3>{{ event.name }}</h3>
+                            <span class="slots-badge">{{ event.slots }} vagas</span>
+                        </div>
+                        <div class="event-content">
+                            <button class="reserve-btn">Reservar Vaga</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="info-card queue-info">
+                    <h3><i class="fas fa-users"></i> Fila de Espera</h3>
+                    <ul id="queue-list"></ul>
+                </div>
+
+                <div class="info-card timer-info">
+                    <h3><i class="fas fa-clock"></i> Tempo de Escolha</h3>
+                    <div class="current-user">
+                        <p>Usuário Atual: <span id="current-user-id">-</span></p>
+                    </div>
+                    <div class="timer-display">
+                        <span id="time-left">30</span>
+                        <span class="timer-label">segundos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div id="confirmationModal" style="display: none;" class="modal">
+        <div class="modal-content">
+            <h3>Confirmar Reserva</h3>
+            <input type="text" id="userName" placeholder="Seu nome" required>
+            <input type="tel" id="userPhone" placeholder="Seu telefone" required>
+            <div class="modal-buttons">
+                <button onclick="confirmReservation()">Confirmar</button>
+                <button onclick="closeModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

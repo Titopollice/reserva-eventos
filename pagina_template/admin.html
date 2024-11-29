@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <title>Painel Administrativo - Gerenciamento de Eventos</title>
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Painel Administrativo</h1>
+        
+        <div class="admin-controls">
+            <h2>Adicionar Novo Evento</h2>
+            <div class="add-event-form">
+                <input type="text" id="new-event-name" placeholder="Nome do Evento" required>
+                <input type="number" id="new-event-slots" placeholder="Quantidade de Vagas" min="1" required>
+                <button id="add-event-btn">Adicionar Evento</button>
+            </div>
+        </div>
+
+        <div id="events-admin">
+            <h2>Eventos Existentes</h2>
+            {% for event in events %}
+            <div class="event-card admin-card" data-id="{{ event.id }}">
+                <input type="text" class="event-name" value="{{ event.name }}" placeholder="Nome do Evento">
+                <input type="number" class="event-slots" value="{{ event.slots }}" min="0" placeholder="Vagas">
+                <div class="admin-buttons">
+                    <button class="save-btn">Salvar</button>
+                    <button class="delete-btn">Excluir</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+</body>
+</html> 
