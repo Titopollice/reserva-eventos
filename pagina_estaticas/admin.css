@@ -1,0 +1,249 @@
+/* Geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6; /* Fundo neutro */
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.online-users {
+    background-color: #e3f2fd;
+    padding: 6px 16px;
+    border-radius: 0px;
+    color: #2196f3;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.online-users i {
+    margin-right: 8px;
+}
+
+/* Controle de Admin */
+.admin-controls {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 0px; /* Bordas mais quadradas */
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-controls h2 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Formulário de Adicionar Evento */
+.add-event-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    align-items: center;
+}
+
+.add-event-form input {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 0px; /* Bordas retas */
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.add-event-form input:focus {
+    border-color: #0078d4; /* Azul Microsoft */
+    outline: none;
+}
+
+/* Botão de Adicionar Evento */
+#add-event-btn {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 0px; /* Bordas retas */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#add-event-btn:hover {
+    background-color: #005a8d;
+}
+
+/* Lista de Eventos */
+#events-admin {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#events-admin h2 {
+    grid-column: 1 / -1;
+    color: #34495e;
+    margin-top: 0;
+}
+
+/* Cartão de Admin */
+.event-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0px; /* Bordas retas */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 0px; /* Bordas retas */
+    font-size: 14px;
+}
+
+.event-card input:focus {
+    border-color: #0078d4; /* Azul no foco */
+    outline: none;
+}
+
+/* Botões de Ação (Salvar, Excluir) */
+.admin-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.save-btn, .delete-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 0px; /* Bordas retas */
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s ease-in-out;
+}
+
+.save-btn {
+    background-color: #0078d4; /* Azul Microsoft */
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #005a8d;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background-color: #e74c3c; /* Vermelho para deletar */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Modal de Confirmação (para reservas ou ações) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 0px; /* Bordas quadradas */
+    width: 300px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+    background-color: #2196f3;
+    color: white;
+}
+
+.modal-buttons button:last-child {
+    background-color: #e0e0e0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .add-event-form {
+        grid-template-columns: 1fr;
+    }
+
+    #events-admin {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

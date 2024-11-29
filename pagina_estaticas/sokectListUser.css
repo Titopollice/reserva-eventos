@@ -1,0 +1,226 @@
+/* Geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6; /* Fundo neutro */
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.online-users {
+    background-color: #e3f2fd;
+    padding: 6px 16px;
+    border-radius: 0px;
+    color: #2196f3;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.online-users i {
+    margin-right: 8px;
+}
+
+/* Lista de Eventos */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsivo */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.event-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 0px; /* Bordas retas */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-header {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 0px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.event-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.slots-badge {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #2196f3;
+    padding: 4px 8px;
+    border-radius: 0px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Botão de Reserva */
+.reserve-btn {
+    background-color: #0078d4; /* Azul Microsoft */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 0px; /* Bordas retas */
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.reserve-btn:hover {
+    background-color: #005a8d; /* Azul mais escuro */
+}
+
+/* Modal de Confirmação */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 0px; /* Bordas quadradas */
+    width: 300px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+    background-color: #2196f3;
+    color: white;
+}
+
+.modal-buttons button:last-child {
+    background-color: #e0e0e0;
+}
+
+/* Fila de Usuários */
+#queue-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#queue-list li {
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 0px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#queue-list li.my-user {
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+}
+
+.current-user-badge {
+    background-color: #2196f3;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 0px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Contagem Regressiva */
+.timer-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.timer-display {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e91e63; /* Cor de destaque */
+}
+
+.timer-label {
+    font-size: 16px;
+    color: #666;
+    margin-left: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
