@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Evento 1",
+        "slots": 5
+    },
+    {
+        "id": 2,
+        "name": "Evento 2",
+        "slots": 5
+    },
+    {
+        "id": 3,
+        "name": "Evento 3",
+        "slots": 5
+    },
+    {
+        "id": 4,
+        "name": "Evento 4",
+        "slots": 5
+    },
+    {
+        "id": 5,
+        "name": "Intercambio de Ingl\u00eas",
+        "slots": 5
+    }
+]
