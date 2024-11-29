@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('pagina_estaticas', filename='admin.css') }}">
     <title>Painel Administrativo - Gerenciamento de Eventos</title>
 </head>
 <body>
@@ -34,6 +34,6 @@
         </div>
     </div>
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
-    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+    <script src="{{ url_for('pagina_estaticas', filename='admin.js') }}"></script>
 </body>
 </html> 
