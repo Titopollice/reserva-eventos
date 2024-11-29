@@ -1,7 +1,7 @@
 /* Geral */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f3f4f6; /* Fundo neutro */
+    background-color: #c7e9e3; /* Fundo neutro */
     margin: 0;
     padding: 20px;
     min-height: 100vh;
@@ -67,7 +67,7 @@ body {
 }
 
 .event-header {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 0px;
     border-bottom: 1px solid #e0e0e0;

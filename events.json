@@ -1,27 +1,27 @@
 [
     {
         "id": 1,
-        "name": "Evento 1",
-        "slots": 3
+        "name": "Campus Party",
+        "slots": 300
     },
     {
         "id": 2,
-        "name": "Evento 2",
-        "slots": 5
+        "name": "SmartCity - Rio Verde",
+        "slots": 50
     },
     {
         "id": 3,
-        "name": "Evento 3",
-        "slots": 5
+        "name": "Digitalks Expo 2024",
+        "slots": 30
     },
     {
         "id": 4,
-        "name": "Evento 4",
-        "slots": 5
+        "name": "Web Summit Rio 2024",
+        "slots": 150
     },
     {
         "id": 5,
         "name": "Intercambio de Ingl\u00eas",
-        "slots": 5
+        "slots": 15
     }
 ]
